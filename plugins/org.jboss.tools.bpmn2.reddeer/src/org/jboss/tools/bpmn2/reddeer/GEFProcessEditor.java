@@ -96,7 +96,7 @@ public class GEFProcessEditor extends GEFEditor {
 
 		// Detect new edit part in the parent
 		final ViewerListener parentViewerListener = new ViewerListener();
-		Display.syncExec(new Runnable() {
+		Display.asyncExec(new Runnable() {
 			@Override
 			public void run() {
 				parent.addEditPartListener(parentViewerListener);
