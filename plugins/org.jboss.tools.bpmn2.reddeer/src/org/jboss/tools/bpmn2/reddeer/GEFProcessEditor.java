@@ -108,7 +108,7 @@ public class GEFProcessEditor extends GEFEditor {
 
 		new WaitUntil(new EditorHasEditParts(this, oldCount));
 		
-		Display.syncExec(new Runnable() {
+		Display.asyncExec(new Runnable() {
 			@Override
 			public void run() {
 				parent.refresh();
